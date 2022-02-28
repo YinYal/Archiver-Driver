@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archiver Driver", "Archiver Driver\Archiver Driver.csproj", "{7172A20F-48AE-4E8A-9849-6A10C08823B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7172A20F-48AE-4E8A-9849-6A10C08823B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7172A20F-48AE-4E8A-9849-6A10C08823B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7172A20F-48AE-4E8A-9849-6A10C08823B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7172A20F-48AE-4E8A-9849-6A10C08823B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ADD1578-35DF-42C6-88C0-A8F41BBB73BA}
+	EndGlobalSection
+EndGlobal
