@@ -1,5 +1,4 @@
 # Archiver_Driver
- Front-End da aplicação Archiver Driver.
  Um projeto em desenvolvimento da turma Senac Santa Luzia - Formação.net 2021.1
 
  Linguagens:
