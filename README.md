@@ -3,13 +3,13 @@
  Um projeto em desenvolvimento da turma Senac Santa Luzia - Formação.net 2021.1
 
  Linguagens:
- HTML5
- CSS3
- JavaScript 1.8.5
+ - HTML5
+ - CSS3
+ - JavaScript 1.8.5
 
  Frameworks:
- Font Awesome → Glyphicons
- Bootstrap → Framework CSS
+ - Font Awesome → Glyphicons
+ - Bootstrap → Framework CSS
 
  Colaboradores:
  - Herick Bartholo (https://github.com/YinYal)
