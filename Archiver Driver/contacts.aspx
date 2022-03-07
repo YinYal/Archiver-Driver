@@ -38,7 +38,7 @@
         <p>
             Mensagem:</p>
           <p>
-            &nbsp;<asp:TextBox ID="contactMessage" runat="server" Height="67px" Width="297px"></asp:TextBox>
+            &nbsp;<asp:TextBox ID="contactMessage" runat="server" Height="67px" Width="297px" TextMode="MultiLine" Columns ="50" Rows ="5" MaxLength="120"></asp:TextBox>
         </p>
           <p>
               <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Enviar" />
