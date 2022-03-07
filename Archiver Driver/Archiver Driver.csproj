@@ -72,12 +72,13 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="assets\favicon.ico" />
+    <Content Include="cadastro.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="about.aspx" />
     <Content Include="js\scripts.js" />
     <Content Include="css\global.css" />
     <Content Include="login.aspx" />
-    <Content Include="users.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
     <Content Include="contacts.aspx">
@@ -93,12 +94,26 @@
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cadastro.aspx.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro.aspx.designer.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PageMaster.Master.cs">
@@ -121,13 +136,6 @@
     </Compile>
     <Compile Include="contacts.aspx.designer.cs">
       <DependentUpon>contacts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="users.aspx.cs">
-      <DependentUpon>users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="users.aspx.designer.cs">
-      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>upload.aspx</DependentUpon>
