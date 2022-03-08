@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="index.aspx">Archiver Driver</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-6" id="nav-content">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-6 text-uppercase">
                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.aspx" title="Página inicial"><i class="fas fa-home"></i> início</a></li>
                         <li class="nav-item"><a class="nav-link" href="upload.aspx" title="Enviar documenntos"><i class="fas fa-file-alt"></i> enviar</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacts.aspx" title="Faça contato"><i class="fas fa-comments"></i> contatos</a></li>

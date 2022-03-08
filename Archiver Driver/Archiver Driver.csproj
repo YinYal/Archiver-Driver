@@ -71,6 +71,8 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="assets\6692775.jpg" />
+    <Content Include="assets\background.jpeg" />
     <Content Include="assets\favicon.ico" />
     <Content Include="cadastro.aspx" />
     <Content Include="css\bootstrap.css" />
