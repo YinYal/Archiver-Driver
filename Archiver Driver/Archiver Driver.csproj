@@ -75,6 +75,7 @@
     <Content Include="assets\background.jpeg" />
     <Content Include="assets\favicon.ico" />
     <Content Include="cadastro.aspx" />
+    <Content Include="assets\black-city.jpg" />
     <Content Include="css\bootstrap.css" />
     <Content Include="about.aspx" />
     <Content Include="js\scripts.js" />

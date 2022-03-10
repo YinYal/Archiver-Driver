@@ -14,41 +14,37 @@
 <body id="bg-body">
     <div class="container">
         <div class="d-flex aligns-items-center position-absolute top-50 start-50 translate-middle" id="glass">
-            <div class="border rounded-3 p-5 text-uppercase">
+            <div class="border rounded-3 pe-5 ps-5 pt-3 pb-3">
                 <a class="links" id="paracadastro"></a>
                 <a class="links" id="paralogin"></a>
 
-                <div class="content">
+                <div class="content" id="bg-card">
                     <!--FORMULÁRIO DE LOGIN-->
-                    <div class="text-white" id="login">
+                    <div class="text-white lead" id="login">
                         <form id="form1" runat="server">
-                            <h1 class="mb-5 text-center">Login</h1>
-                            <p>
+                            <h1 class="mb-3 text-center border-bottom text-uppercase display-3">Login</h1>
+
+                            <div class="form-group mb-0">
                                 <label for="tbEmail">Seu e-mail:</label>
-                                <br />
-                                <asp:TextBox ID="tbEmail" Text="Digite seu E-mail" onfocus="this.value=''" runat="server" Width="254px"></asp:TextBox>
-                            </p>
+                                <asp:TextBox ID="tbEmail" CssClass="form-control" Text="Digite seu E-mail" onfocus="this.value=''" runat="server" Width="254px"></asp:TextBox>
+                            </div>
 
-                            <p>
-                                <label for="tbSenha">Sua Senha:</label>
-                                <br />
+                            <div class="form-group mb-2">
+                                <label for="tbSenha">Sua senha:</label>
+                                <asp:TextBox ID="tbSenha" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
+                            </div>
 
-                                <asp:TextBox ID="tbSenha" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
-                            </p>
+                            <asp:Button ID="btnlogar" CssClass="btn btn-primary" runat="server" Text="Entrar" OnClick="btnlogar_Click" />
 
-                            <p>
-                                <asp:Button ID="btnlogar" runat="server" Text="Logar" OnClick="btnlogar_Click" />
-                            </p>
-
-                            <p class="link">
-                                Ainda não tem conta?
-            <a href="cadastro.aspx">Cadastre-se</a>
+                            <p class="link text-center">
+                                Ainda não tem conta? <br />
+            <a class="text-primary" href="cadastro.aspx">Cadastrar-se</a>
                             </p>
                         </form>
                     </div>
-                </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

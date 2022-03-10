@@ -1,8 +1,11 @@
-﻿#glass{
-    background: rgb(255,255,255,0.1);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+﻿body a{
+    text-decoration:inherit;
 }
-#bg-body{
-    background-image:url(../assets/background.jpeg);
+
+#glass {
+    background: rgb(255,255,255,0.1);
+}
+#bg-body {
+    background-image: url(../assets/black-city.jpg); 
+    border-image-width: auto
 }
