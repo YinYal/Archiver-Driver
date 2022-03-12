@@ -229,8 +229,8 @@ C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompi
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CoreCompileInputs.cache
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
 C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb
+C:\Users\mm_co\source\repos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache

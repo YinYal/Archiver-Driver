@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,6 +15,22 @@ namespace ProjetoFinal
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public static String sha256_hash(String value)
+        {
+            StringBuilder Sb = new StringBuilder();
+
+            using (SHA256 hash = SHA256Managed.Create())
+            {
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
+            }
+
+            return Sb.ToString();
         }
 
         protected void btnlogar_Click(object sender, EventArgs e)
@@ -31,7 +49,7 @@ namespace ProjetoFinal
             cmd.Connection = con;
             cmd.CommandText = "select * from usuario where emailuser = @emailuser and senha = @senha";
             cmd.Parameters.AddWithValue("emailuser", emailuser);
-            cmd.Parameters.AddWithValue("senha", senha);
+            cmd.Parameters.AddWithValue("senha", sha256_hash(tbSenha.Text));
             con.Open();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
