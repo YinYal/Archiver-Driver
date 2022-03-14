@@ -15,5 +15,5 @@
  - Leonardo Campos (https://github.com/leopcampo)
  - Eric Princisval (https://github.com/wiccanoscarlate)
  - Matheus Allen   (https://github.com/Matheus-Allen)
- - 
+ - Geraldo (https://github.com/prim0G)
 
