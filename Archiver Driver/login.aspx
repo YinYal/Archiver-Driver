@@ -9,7 +9,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/logincad.css" />
 </head>
 <body id="bg-body">
     <div class="container">
@@ -31,20 +30,25 @@
 
                             <div class="form-group mb-2">
                                 <label for="tbSenha">Sua senha:</label>
-                                <asp:TextBox ID="tbSenha" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
+                                <asp:TextBox ID="tbPass" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
                             </div>
 
-                            <asp:Button ID="btnlogar" CssClass="btn btn-primary" runat="server" Text="Entrar" OnClick="btnlogar_Click" />
-
-                            <p class="link text-center">
-                                Ainda não tem conta? <br />
-            <a class="text-primary" href="cadastro.aspx">Cadastrar-se</a>
-                            </p>
+                            <div class="text-center">
+                                <asp:Button ID="btnlogar" CssClass="btn btn-primary" runat="server" Text="Entrar" OnClick="btnlogar_Click" />
+                                <br />
+                                  <input class="form-check-input mb-4" type="checkbox" value="" id="checkbox" />
+                                  <label class="form-check-label" for="flexCheckDefault">Mantenha-me conectado</label>
+                                <p class="link">
+                                    Ainda não tem conta?
+                                    <br />
+                                    <a class="text-primary" href="register.aspx">Cadastrar-se</a>
+                                </p>
+                            </div>
                         </form>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 </html>

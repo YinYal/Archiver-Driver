@@ -33,22 +33,22 @@ namespace Archiver_Driver
         protected global::System.Web.UI.WebControls.TextBox contactEmail;
 
         /// <summary>
-        /// Controle contactNumber.
+        /// Controle contactTell.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contactNumber;
+        protected global::System.Web.UI.WebControls.TextBox contactTell;
 
         /// <summary>
-        /// Controle contactAssunto.
+        /// Controle contactSubject.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contactAssunto;
+        protected global::System.Web.UI.WebControls.TextBox contactSubject;
 
         /// <summary>
         /// Controle contactMessage.

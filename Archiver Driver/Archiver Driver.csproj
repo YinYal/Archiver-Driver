@@ -74,7 +74,7 @@
     <Content Include="assets\6692775.jpg" />
     <Content Include="assets\background.jpeg" />
     <Content Include="assets\favicon.ico" />
-    <Content Include="cadastro.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="assets\black-city.jpg" />
     <Content Include="css\bootstrap.css" />
     <Content Include="about.aspx" />
@@ -87,7 +87,7 @@
     <Content Include="contacts.aspx">
       <BrowseToURL>~/contacts.aspx</BrowseToURL>
     </Content>
-    <Content Include="upload.aspx" />
+    <Content Include="config.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">
@@ -97,12 +97,12 @@
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cadastro.aspx.cs">
-      <DependentUpon>cadastro.aspx</DependentUpon>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cadastro.aspx.designer.cs">
-      <DependentUpon>cadastro.aspx</DependentUpon>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -140,12 +140,12 @@
     <Compile Include="contacts.aspx.designer.cs">
       <DependentUpon>contacts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>upload.aspx</DependentUpon>
+    <Compile Include="config.aspx.cs">
+      <DependentUpon>config.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>upload.aspx</DependentUpon>
+    <Compile Include="config.aspx.designer.cs">
+      <DependentUpon>config.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

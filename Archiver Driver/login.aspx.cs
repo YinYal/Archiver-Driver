@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,23 +17,36 @@ namespace ProjetoFinal
 
         }
 
+        public static String sha256_hash(String value)
+        {
+            StringBuilder Sb = new StringBuilder();
+
+            using (SHA256 hash = SHA256Managed.Create())
+            {
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
+            }
+
+            return Sb.ToString();
+        }
+
         protected void btnlogar_Click(object sender, EventArgs e)
         {
-            String emailuser = tbEmail.Text;
-            String senha = tbSenha.Text;
-            //
-            //capturar a string de conexão
+            String email = tbEmail.Text;
+            String pass = tbPass.Text;
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connString;
             connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-            //cria um objeto de conexão
             SqlConnection con = new SqlConnection();
             con.ConnectionString = connString.ToString();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select * from usuario where emailuser = @emailuser and senha = @senha";
-            cmd.Parameters.AddWithValue("emailuser", emailuser);
-            cmd.Parameters.AddWithValue("senha", senha);
+            cmd.CommandText = "select * from client where email = @email and password = @password";
+            cmd.Parameters.AddWithValue("email", email);
+            cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
             con.Open();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
