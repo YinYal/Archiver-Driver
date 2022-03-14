@@ -30,7 +30,7 @@
 
                             <div class="form-group mb-2">
                                 <label for="tbSenha">Sua senha:</label>
-                                <asp:TextBox ID="tbSenha" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
+                                <asp:TextBox ID="tbPass" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
                             </div>
 
                             <div class="text-center">

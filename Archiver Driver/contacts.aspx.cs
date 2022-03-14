@@ -36,12 +36,12 @@ namespace Archiver_Driver
             con.ConnectionString = connString.ToString();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Insert into contato (nome,email,telefone,assunto,mensagem) values (@nome,@email,@telefone,@assunto,@mensagem)";
-            cmd.Parameters.AddWithValue("nome", contactName.Text);
-            cmd.Parameters.AddWithValue("email", contactEmail.Text);
-            cmd.Parameters.AddWithValue("telefone", contactNumber.Text);
-            cmd.Parameters.AddWithValue("assunto", contactAssunto.Text);
-            cmd.Parameters.AddWithValue("mensagem", contactMessage.Text);
+            cmd.CommandText = "Insert into contacts (name,email,tell,subject,message) values (@name,@email,@tell,@subject,@message)";
+            cmd.Parameters.AddWithValue("@name", contactName.Text);
+            cmd.Parameters.AddWithValue("@email", contactEmail.Text);
+            cmd.Parameters.AddWithValue("@tell", contactTell.Text);
+            cmd.Parameters.AddWithValue("@subject", contactSubject.Text);
+            cmd.Parameters.AddWithValue("@message", contactMessage.Text);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

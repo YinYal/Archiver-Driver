@@ -35,21 +35,18 @@ namespace ProjetoFinal
 
         protected void btnlogar_Click(object sender, EventArgs e)
         {
-            String emailuser = tbEmail.Text;
-            String senha = tbSenha.Text;
-            //
-            //capturar a string de conexão
+            String email = tbEmail.Text;
+            String pass = tbPass.Text;
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connString;
             connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-            //cria um objeto de conexão
             SqlConnection con = new SqlConnection();
             con.ConnectionString = connString.ToString();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select * from usuario where emailuser = @emailuser and senha = @senha";
-            cmd.Parameters.AddWithValue("emailuser", emailuser);
-            cmd.Parameters.AddWithValue("senha", sha256_hash(tbSenha.Text));
+            cmd.CommandText = "select * from client where email = @email and password = @password";
+            cmd.Parameters.AddWithValue("email", email);
+            cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
             con.Open();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)

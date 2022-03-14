@@ -24,7 +24,7 @@
                         <div class="form-group mb-1">
                             <label for="nome_cad">Seu nome:</label>
                             <br />
-                            <asp:TextBox ID="tbNome" CssClass="form-control" runat="server" Width="254px"></asp:TextBox>
+                            <asp:TextBox ID="tbName" CssClass="form-control" runat="server" Width="254px"></asp:TextBox>
                         </div>
 
                         <div class="form-group mb-1">
@@ -36,17 +36,17 @@
                         <div class="form-group mb-1">
                             <label for="senha_cad">Sua Senha</label>
                             <br />
-                            <asp:TextBox ID="tbSenha" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
+                            <asp:TextBox ID="tbPass" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
                         </div>
 
                         <div class="form-group mb-3">
                             <label for="confsenhacad">Confirme sua senha:</label>
                             <br />
-                            <asp:TextBox ID="tbSenhaconfi" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
+                            <asp:TextBox ID="tbPassconfi" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
                         </div>
 
                         <div class="text-center">
-                            <asp:CompareValidator ID="CompareValidator1" runat="server" CssClass="text-danger" ControlToCompare="tbSenha" ControlToValidate="tbSenhaconfi" ErrorMessage="Senha Incorreta !!"></asp:CompareValidator>
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" CssClass="text-danger" ControlToCompare="tbPass" ControlToValidate="tbPassconfi" ErrorMessage="Senha Incorreta !!"></asp:CompareValidator>
                             <br />
                             <asp:Button ID="btCadastrar" CssClass="btn btn-primary" runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
 
@@ -59,24 +59,24 @@
                 </div>
             </div>
         </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [client] WHERE [Id] = @Id" InsertCommand="INSERT INTO [client] ([name], [password], [email]) VALUES (@name, @password, @email)" SelectCommand="SELECT [Id], [name], [password], [email] FROM [client]" UpdateCommand="UPDATE [client] SET [name] = @name, [password] = @password, [email] = @email WHERE [Id] = @Id">
+            <DeleteParameters>
+                <asp:Parameter Name="Id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="name" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="name" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+                <asp:Parameter Name="Id" Type="Int32" />
+            </UpdateParameters>
+
+        </asp:SqlDataSource>
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSourceuser" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [usuario] WHERE [cpf] = @cpf" InsertCommand="INSERT INTO [usuario] ([cpf], [emailuser], [senha], [nomeuser]) VALUES (@cpf, @emailuser, @senha, @nomeuser)" SelectCommand="SELECT [cpf], [emailuser], [senha], [nomeuser] FROM [usuario]" UpdateCommand="UPDATE [usuario] SET [emailuser] = @emailuser, [senha] = @senha, [nomeuser] = @nomeuser WHERE [cpf] = @cpf">
-        <DeleteParameters>
-            <asp:Parameter Name="cpf" Type="String" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="cpf" Type="String" />
-            <asp:Parameter Name="emailuser" Type="String" />
-            <asp:Parameter Name="senha" Type="String" />
-            <asp:Parameter Name="nomeuser" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="emailuser" Type="String" />
-            <asp:Parameter Name="senha" Type="String" />
-            <asp:Parameter Name="nomeuser" Type="String" />
-            <asp:Parameter Name="cpf" Type="String" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
 </body>
 </html>

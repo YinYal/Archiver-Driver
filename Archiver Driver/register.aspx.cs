@@ -43,10 +43,10 @@ namespace ProjetoFinal
             con.ConnectionString = connString.ToString();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Insert into usuario (nomeuser,emailuser,senha) values (@nomeuser,@emailuser,@senha)";
-            cmd.Parameters.AddWithValue("nomeuser", tbNome.Text);
-            cmd.Parameters.AddWithValue("emailuser", tbEmail.Text);
-            cmd.Parameters.AddWithValue("senha", sha256_hash(tbSenha.Text));
+            cmd.CommandText = "Insert into client (name,email,password) values (@name,@email,@password)";
+            cmd.Parameters.AddWithValue("@name", tbName.Text);
+            cmd.Parameters.AddWithValue("@email", tbEmail.Text);
+            cmd.Parameters.AddWithValue("@password", sha256_hash(tbPass.Text));
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
