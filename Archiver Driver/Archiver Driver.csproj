@@ -74,6 +74,7 @@
     <Content Include="assets\6692775.jpg" />
     <Content Include="assets\background.jpeg" />
     <Content Include="assets\favicon.ico" />
+    <Content Include="dashboard.aspx" />
     <Content Include="register.aspx" />
     <Content Include="assets\black-city.jpg" />
     <Content Include="css\bootstrap.css" />
@@ -82,6 +83,7 @@
     <Content Include="css\global.css" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="testesso.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
     <Content Include="contacts.aspx">
@@ -96,6 +98,13 @@
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -146,6 +155,13 @@
     </Compile>
     <Compile Include="config.aspx.designer.cs">
       <DependentUpon>config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testesso.aspx.cs">
+      <DependentUpon>testesso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testesso.aspx.designer.cs">
+      <DependentUpon>testesso.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
