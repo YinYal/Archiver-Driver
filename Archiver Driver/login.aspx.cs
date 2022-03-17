@@ -17,7 +17,7 @@ namespace ProjetoFinal
 
         }
 
-        public static String sha256_hash(String value)
+        public static String Sha256_hash(String value)
         {
             StringBuilder Sb = new StringBuilder();
 
@@ -33,37 +33,34 @@ namespace ProjetoFinal
             return Sb.ToString();
         }
 
-        protected void btnlogar_Click(object sender, EventArgs e)
+        protected void Btnlogar_Click(object sender, EventArgs e)
         {
             String email = tbEmail.Text;
-            String pass = tbPass.Text;
+            String pass = Sha256_hash(tbPass.Text);
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connString;
             connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = connString.ToString();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from client where email = @email and password = @password";
+            SqlConnection con = new SqlConnection
+            {
+                ConnectionString = connString.ToString()
+            };
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = con,
+                CommandText = "select * from client where email = @email and password = @password"
+            };
             cmd.Parameters.AddWithValue("email", email);
-            cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
+            cmd.Parameters.AddWithValue("password", pass);
             con.Open();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
-                //Cria o cookie
                 HttpCookie login = new HttpCookie("login", tbEmail.Text);
                 Response.Cookies.Add(login);
-
-
-                //string cookie = Request.Cookies["login"];
-
-                //direcionar para a pagina principal
                 Response.Redirect("~/index.aspx");
             }
             else
             {
-                // Alert Javascript
                 Response.Write("<script> alert('Email ou Senha Incorretos!');</script>");
             }
         }

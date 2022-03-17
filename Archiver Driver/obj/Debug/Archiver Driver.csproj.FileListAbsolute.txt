@@ -288,7 +288,6 @@ C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\bin\ro
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CoreCompileInputs.cache
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
@@ -352,3 +351,63 @@ C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiv
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb
+C:\Users\barth\OneDrive\Documentos\GitHub\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\Archiver Driver.dll.config
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\Archiver Driver.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\Archiver Driver.pdb
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csc.exe
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csc.exe.config
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csc.rsp
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csi.exe
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csi.exe.config
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\csi.rsp
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.AppContext.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Console.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.IO.Compression.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Net.Http.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Net.Sockets.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.ValueTuple.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Xml.XPath.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\vbc.exe
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\vbc.exe.config
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\vbc.rsp
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompiler.exe
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CoreCompileInputs.cache
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
+C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb

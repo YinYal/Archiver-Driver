@@ -12,20 +12,26 @@
         <p class="red center small">Todos os campos são obrigatórios.</p>
 
         <div class="form-control">
-            <label>Nome completo:</label>
+            <label class="form-label">Nome completo:</label>
             <asp:TextBox ID="contactName" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="reqMin" runat="server" ControlToValidate="contactName" Display="None" />
 
-            <label>Seu e-mail:</label>
+            <label class="form-label">Seu e-mail:</label>
             <asp:TextBox ID="contactEmail" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="contactEmail" Display="None" />
 
-            <label>Telefone:</label>
+            <label class="form-label">Telefone:</label>
             <asp:TextBox ID="contactTell" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="contactTell" Display="None" />
 
-            <label>Assuntos:</label>
+            <label class="form-label">Assuntos:</label>
             <asp:TextBox ID="contactSubject" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="contactSubject" Display="None" />
 
-            <label>Mensagem:</label>
+            <label class="form-label">Mensagem:</label>
             <asp:TextBox ID="contactMessage" runat="server" CssClass="form-control col-3 mb-4" Height="67px" TextMode="MultiLine" Columns="50" Rows="5" MaxLength="120"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="contactMessage" Display="None" />
+
             <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Text="Enviar" />
         </div>
     </div>

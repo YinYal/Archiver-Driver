@@ -25,24 +25,28 @@
                             <label for="nome_cad">Seu nome:</label>
                             <br />
                             <asp:TextBox ID="tbName" CssClass="form-control" runat="server" Width="254px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="reqMin" runat="server" ControlToValidate="tbName" Display="None" />
                         </div>
 
                         <div class="form-group mb-1">
                             <label for="email_cad">Seu e-mail</label>
                             <br />
                             <asp:TextBox ID="tbEmail" runat="server" CssClass="form-control" Width="254px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbEmail" Display="None" />
                         </div>
 
                         <div class="form-group mb-1">
                             <label for="senha_cad">Sua Senha</label>
                             <br />
                             <asp:TextBox ID="tbPass" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPass" Display="None" />
                         </div>
 
                         <div class="form-group mb-3">
                             <label for="confsenhacad">Confirme sua senha:</label>
                             <br />
                             <asp:TextBox ID="tbPassconfi" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbPassconfi" Display="None" />
                         </div>
 
                         <div class="text-center">
