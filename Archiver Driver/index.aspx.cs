@@ -15,7 +15,33 @@ namespace Archiver_Driver
         {
 
         }
-        private void btnUpload_Click(object sender, System.EventArgs e)
+        public void getPropriedadesCookie(string nomeCookie)
+        {
+            HttpCookie cookie = ObterRequisicaoCookie(nomeCookie);
+            if (cookie != null)
+            {
+                string valores = cookie.Value.ToString();
+                ltrCookie.Text = valores;
+            }
+            else ltrCookie.Text = string.Empty;
+        }
+        private HttpCookie ObterRequisicaoCookie(string nomeCookie)
+        {
+            try
+            {
+                return this.Page.Request.Cookies[nomeCookie];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        protected void btnLer_Click(object sender, EventArgs e)
+        {
+            getPropriedadesCookie("login");
+        }
+
+        protected void btnUpload_Click1(object sender, EventArgs e)
         {
             string strFileName;
             string strFilePath;
@@ -41,7 +67,6 @@ namespace Archiver_Driver
                 {
                     oFile.PostedFile.SaveAs(strFilePath);
                     lblUploadResult.Text = strFileName + " foi carregado com sucesso.";
-
                     System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
                     System.Configuration.ConnectionStringSettings connString;
                     connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
@@ -82,34 +107,10 @@ namespace Archiver_Driver
                 lblUploadResult.Text = "Clique para selecionar um Arquivo.";
             }
             frmConfirmation.Visible = true;
-        }
 
-        public void getPropriedadesCookie(string nomeCookie)
-        {
-            HttpCookie cookie = ObterRequisicaoCookie(nomeCookie);
-            if (cookie != null)
-            {
-                string valores = cookie.Value.ToString();
-                ltrCookie.Text = valores;
-            }
-            else ltrCookie.Text = string.Empty;
-        }
-        private HttpCookie ObterRequisicaoCookie(string nomeCookie)
-        {
-            try
-            {
-                return this.Page.Request.Cookies[nomeCookie];
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        protected void btnLer_Click(object sender, EventArgs e)
-        {
-            getPropriedadesCookie("login");
-        }
 
+        }
+        
     }
 }
 

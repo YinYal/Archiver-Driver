@@ -5,22 +5,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="d-flex">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [doc] WHERE [idUser] = @idUser" InsertCommand="INSERT INTO [doc] ([title], [ex], [path]) VALUES (@title, @ex, @path)" SelectCommand="SELECT [idUser], [title], [ex], [path] FROM [doc]" UpdateCommand="UPDATE [doc] SET [title] = @title, [ex] = @ex, [path] = @path WHERE [idUser] = @idUser">
-        <DeleteParameters>
-            <asp:Parameter Name="idUser" Type="Int32" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="ex" Type="String" />
-            <asp:Parameter Name="path" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="ex" Type="String" />
-            <asp:Parameter Name="path" Type="String" />
-            <asp:Parameter Name="idUser" Type="Int32" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [doc] WHERE [idUser] = @idUser" InsertCommand="INSERT INTO [doc] ([title], [ex], [path]) VALUES (@title, @ex, @path)" SelectCommand="SELECT [idUser], [title], [ex], [path] FROM [doc]" UpdateCommand="UPDATE [doc] SET [title] = @title, [ex] = @ex, [path] = @path WHERE [idUser] = @idUser">
+            <DeleteParameters>
+                <asp:Parameter Name="idUser" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="title" Type="String" />
+                <asp:Parameter Name="ex" Type="String" />
+                <asp:Parameter Name="path" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="title" Type="String" />
+                <asp:Parameter Name="ex" Type="String" />
+                <asp:Parameter Name="path" Type="String" />
+                <asp:Parameter Name="idUser" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
 
         <!-- Barra lateral da aplicação -->
         <aside class="col-3 border-end pe-3 pt-4">
@@ -37,9 +37,10 @@
             <div class="d-grid">
                 <asp:Label runat="server" CssClass="form-label"> Envie seu documento (PDF):</asp:Label>
                 <input id="oFile" type="file" class="form-control form-control-sm" runat="server" name="oFile" />
-                <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server"></asp:Button>
+                <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server" OnClick="btnUpload_Click1"></asp:Button>
                 <asp:Panel ID="frmConfirmation" Visible="False" runat="server">
-                    <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
+                <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
+                <asp:Label ID="ltrCookie" runat="server" Visible="false"></asp:Label>
                 </asp:Panel>
             </div>
 
@@ -56,15 +57,5 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
             </article>
         </div>
-
-
-
-
-
-
-
-
-
     </div>
-    <asp:Label ID="ltrCookie" runat="server" Visible="false"></asp:Label>
 </asp:Content>
