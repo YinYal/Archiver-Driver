@@ -36,7 +36,7 @@
             <!-- Botão de Upload de arquivos -->
             <div class="d-grid">
                 <asp:Label runat="server" CssClass="form-label"> Envie seu documento (PDF):</asp:Label>
-                <input id="oFile" type="file" class="form-control form-control-sm" runat="server" name="oFile" />
+                <input id="oFile" type="file" class="form-control form-control-sm" accept="application/pdf" runat="server" name="oFile" />
                 <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server" OnClick="btnUpload_Click1"></asp:Button>
                 <asp:Panel ID="frmConfirmation" Visible="False" runat="server">
                 <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
