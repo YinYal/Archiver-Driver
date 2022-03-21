@@ -50,10 +50,10 @@ namespace Archiver_Driver
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "Insert into doc (title,ex,path) values (@title,@ex,@path)";
+                    cmd.CommandText = "Insert into doc (idUser,title,type,path) values (@idUser,@title,@type,@path)";
                     cmd.Parameters.AddWithValue("title", strFileName);
-                    cmd.Parameters.AddWithValue("idUser", ltrCookie.Text);
-                    cmd.Parameters.AddWithValue("ex", "Arquivo");
+                    cmd.Parameters.AddWithValue("idUser", LblCookie.Text);
+                    cmd.Parameters.AddWithValue("type", "PDF");
                     cmd.Parameters.AddWithValue("path", nomeFile.Trim(' '));
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -67,8 +67,8 @@ namespace Archiver_Driver
                     SqlCommand cmd2 = new SqlCommand();
                     cmd2.Connection = con2;
 
-                    cmd2.CommandText = "Insert into log (title,stats) values (@title,@stats)";
-                    cmd2.Parameters.AddWithValue("idUser", ltrCookie.Text);
+                    cmd2.CommandText = "Insert into log (idUser,title,stats) values (@idUser,@title,@stats)";
+                    cmd2.Parameters.AddWithValue("idUser", LblCookie.Text);
                     cmd2.Parameters.AddWithValue("title", strFileName);
                     cmd2.Parameters.AddWithValue("stats", "criado");
                     con2.Open();
@@ -92,9 +92,9 @@ namespace Archiver_Driver
                 string valores = cookie.Value.ToString();
                 // Varre os valores das propriedades encontrados               
                 // Escreve os valores das propriedades encontradas
-                ltrCookie.Text = valores;
+                LblCookie.Text = valores;
             }
-            else ltrCookie.Text = string.Empty;
+            else LblCookie.Text = string.Empty;
         }
         private HttpCookie ObterRequisicaoCookie(string nomeCookie)
         {

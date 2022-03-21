@@ -60,12 +60,12 @@ namespace Archiver_Driver
         protected global::System.Web.UI.WebControls.Label lblUploadResult;
 
         /// <summary>
-        /// Controle ltrCookie.
+        /// Controle LblCookie.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ltrCookie;
+        protected global::System.Web.UI.WebControls.Label LblCookie;
     }
 }

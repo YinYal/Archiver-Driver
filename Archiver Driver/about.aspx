@@ -22,19 +22,19 @@
             <div class="fs-5">
                 <h2 class="text-center mb-2">Sobre nós</h2>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nós somos a <a href="https://github.com/YinYal" target="_blank"><strong>Woop! Applications</strong></a> uma empresa nascida no Senac com o intuito de desenvolver ferramentas mais objetivas e mais simples. Este é o nosso primeiro projeto, o <strong>Archiver Driver</strong>, um gerenciador de arquivos PDF.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nós somos a <a href="https://github.com/YinYal" target="_blank"><strong>Woop! Applications</strong></a> uma empresa nascida no Senac com o intuito de desenvolver ferramentas mais objetivas e mais simples.
+                </p>
+            </div>
+            <div class="d-block fs-5">
+                <h2 class="text-center mb-2">Sobre o projeto</h2>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este é o nosso primeiro projeto, o <strong>Archiver Driver</strong>, um gerenciador de arquivos PDF.
                     Uma aplicação criada no formato <strong>SPA e MVC</strong>, as nossas linhas de conexão com o banco de dados foram criadas em <strong>C#</strong> e o banco de dados foi criado em <strong>SQL server</strong>. Utilizamos a ferramenta <strong>bootstrap</strong>
                     para toda a estilização e responsividade do template base.
                 </p>
             </div>
-            <div class="d-block fs-5">
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ipsum enim, posuere ac elementum sed, imperdiet in lorem. Cras eget nunc auctor, facilisis dui sit amet, porttitor lacus. Nulla pharetra facilisis dui. Nunc ornare est non sapien aliquam porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor massa in lorem pharetra scelerisque. Morbi pharetra eget est vitae congue. Mauris lobortis, lacus id venenatis malesuada, risus urna pellentesque arcu, sit amet pharetra odio nunc ut leo. Morbi eget quam tellus. Morbi venenatis felis sit amet dolor consectetur, id pulvinar mi pellentesque. Aliquam egestas posuere enim id molestie. Suspendisse mauris libero, efficitur id nisl non, vulputate tempus elit. Mauris ullamcorper malesuada nisl, nec efficitur magna pellentesque vel. Etiam eget felis dictum, feugiat tortor non, sodales lorem.
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ipsum enim, posuere ac elementum sed, imperdiet in lorem. Cras eget nunc auctor, facilisis dui sit amet, porttitor lacus. Nulla pharetra facilisis dui. Nunc ornare est non sapien aliquam porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor massa in lorem pharetra scelerisque. Morbi pharetra eget est vitae congue. Mauris lobortis, lacus id venenatis malesuada, risus urna pellentesque arcu, sit amet pharetra odio nunc ut leo. Morbi eget quam tellus. Morbi venenatis felis sit amet dolor consectetur, id pulvinar mi pellentesque. Aliquam egestas posuere enim id molestie. Suspendisse mauris libero, efficitur id nisl non, vulputate tempus elit. Mauris ullamcorper malesuada nisl, nec efficitur magna pellentesque vel. Etiam eget felis dictum, feugiat tortor non, sodales lorem.
-                </p>
-            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
     </main>
 </asp:Content>

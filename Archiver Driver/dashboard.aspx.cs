@@ -13,5 +13,14 @@ namespace Archiver_Driver
         {
 
         }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SqlDataSource4_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+                   }
     }
 }

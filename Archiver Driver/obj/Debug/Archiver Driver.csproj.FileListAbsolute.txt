@@ -346,7 +346,6 @@ C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSC
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CoreCompileInputs.cache
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
@@ -411,3 +410,4 @@ C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\De
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb
+C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
