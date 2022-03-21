@@ -57,18 +57,22 @@
             <asp:Parameter Name="idUser" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [log] WHERE [idUser] = @idUser" InsertCommand="INSERT INTO [log] ([title], [ex]) VALUES (@title, @ex)" SelectCommand="SELECT [idUser], [title], [ex] FROM [log]" UpdateCommand="UPDATE [log] SET [title] = @title, [ex] = @ex WHERE [idUser] = @idUser">
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [log] WHERE [idLog] = @idLog" InsertCommand="INSERT INTO [log] ([idUser], [title], [stats], [date]) VALUES (@idUser, @title, @stats, @date)" SelectCommand="SELECT [idUser], [title], [stats], [idLog], [date] FROM [log]" UpdateCommand="UPDATE [log] SET [idUser] = @idUser, [title] = @title, [stats] = @stats, [date] = @date WHERE [idLog] = @idLog">
         <DeleteParameters>
-            <asp:Parameter Name="idUser" Type="Int32" />
+            <asp:Parameter Name="idLog" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
+            <asp:Parameter Name="idUser" Type="Int32" />
             <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="ex" Type="String" />
+            <asp:Parameter Name="stats" Type="String" />
+            <asp:Parameter Name="date" Type="DateTime" />
         </InsertParameters>
         <UpdateParameters>
-            <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="ex" Type="String" />
             <asp:Parameter Name="idUser" Type="Int32" />
+            <asp:Parameter Name="title" Type="String" />
+            <asp:Parameter Name="stats" Type="String" />
+            <asp:Parameter Name="date" Type="DateTime" />
+            <asp:Parameter Name="idLog" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
 
@@ -144,13 +148,14 @@
     </asp:GridView>
     <br />
     <h2>Tabela de logs</h2>
-    <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idUser" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None" Width="894px">
+    <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idLog" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None" Width="894px">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-            <asp:BoundField DataField="idUser" HeaderText="id" SortExpression="idUser" InsertVisible="False" ReadOnly="True" />
-            <asp:BoundField DataField="title" HeaderText="titulo" SortExpression="title" />
-            <asp:BoundField DataField="ex" HeaderText="extensão" SortExpression="ex" />
+            <asp:BoundField DataField="idUser" HeaderText="idUser" SortExpression="idUser" />
+            <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
+            <asp:BoundField DataField="stats" HeaderText="stats" SortExpression="stats" />
+            <asp:BoundField DataField="idLog" HeaderText="idLog" InsertVisible="False" ReadOnly="True" SortExpression="idLog" />
+            <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

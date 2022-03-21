@@ -40,7 +40,7 @@
                 <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server" OnClick="btnUpload_Click1"></asp:Button>
                 <asp:Panel ID="frmConfirmation" Visible="False" runat="server">
                 <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
-                <asp:Label ID="ltrCookie" runat="server" Visible="false"></asp:Label>
+                <asp:Label ID="ltrCookie" runat="server"></asp:Label>
                 </asp:Panel>
             </div>
 

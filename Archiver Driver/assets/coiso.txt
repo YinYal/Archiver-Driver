@@ -1,0 +1,37 @@
+CREATE TABLE [dbo].[log] (
+[idLog]  INT        IDENTITY (1, 1) NOT NULL,
+    [idUser] NCHAR(100)        NOT NULL,
+    [title]  NCHAR (100) NOT NULL,
+    [stats]  NCHAR (10) NOT NULL,
+    [date]   DATETIME   DEFAULT (getdate()) NOT NULL,
+    PRIMARY KEY CLUSTERED ([idLog] ASC)
+);
+
+
+CREATE TABLE [dbo].[doc] (
+    [idUser] INT        IDENTITY (1, 1) NOT NULL,
+    [title]  NCHAR (90) NOT NULL,
+    [ex]     NCHAR (90) NOT NULL,
+    [path]   NCHAR (90) NOT NULL,
+    PRIMARY KEY CLUSTERED ([idUser] ASC)
+);
+
+CREATE TABLE [dbo].[contacts] (
+    [Id]      INT        IDENTITY (1, 1) NOT NULL,
+    [email]   NCHAR (10) NOT NULL,
+    [name]    NCHAR (10) NOT NULL,
+    [tell]    NCHAR (10) NOT NULL,
+    [subject] NCHAR (10) NOT NULL,
+    [message] NCHAR (10) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[contacts] (
+    [Id]      INT        IDENTITY (1, 1) NOT NULL,
+    [email]   NCHAR (10) NOT NULL,
+    [name]    NCHAR (10) NOT NULL,
+    [tell]    NCHAR (10) NOT NULL,
+    [subject] NCHAR (10) NOT NULL,
+    [message] NCHAR (10) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);

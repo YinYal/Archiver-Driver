@@ -13,34 +13,8 @@ namespace Archiver_Driver
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-        public void getPropriedadesCookie(string nomeCookie)
-        {
-            HttpCookie cookie = ObterRequisicaoCookie(nomeCookie);
-            if (cookie != null)
-            {
-                string valores = cookie.Value.ToString();
-                ltrCookie.Text = valores;
-            }
-            else ltrCookie.Text = string.Empty;
-        }
-        private HttpCookie ObterRequisicaoCookie(string nomeCookie)
-        {
-            try
-            {
-                return this.Page.Request.Cookies[nomeCookie];
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        protected void btnLer_Click(object sender, EventArgs e)
-        {
             getPropriedadesCookie("login");
         }
-
         protected void btnUpload_Click1(object sender, EventArgs e)
         {
             string strFileName;
@@ -93,10 +67,10 @@ namespace Archiver_Driver
                     SqlCommand cmd2 = new SqlCommand();
                     cmd2.Connection = con2;
 
-                    cmd2.CommandText = "Insert into log (title,ex) values (@title,@ex)";
+                    cmd2.CommandText = "Insert into log (title,stats) values (@title,@stats)";
                     cmd2.Parameters.AddWithValue("idUser", ltrCookie.Text);
                     cmd2.Parameters.AddWithValue("title", strFileName);
-                    cmd2.Parameters.AddWithValue("ex", "Criação");
+                    cmd2.Parameters.AddWithValue("stats", "criado");
                     con2.Open();
                     cmd2.ExecuteNonQuery();
                     con2.Close();
@@ -107,10 +81,39 @@ namespace Archiver_Driver
                 lblUploadResult.Text = "Clique para selecionar um Arquivo.";
             }
             frmConfirmation.Visible = true;
-
-
         }
-        
+        public void getPropriedadesCookie(string nomeCookie)
+        {
+            // Obtém a requisição com dos dados do cookie
+            HttpCookie cookie = ObterRequisicaoCookie(nomeCookie);
+            if (cookie != null)
+            {
+                // Separa os valores das propriedade
+                string valores = cookie.Value.ToString();
+                // Varre os valores das propriedades encontrados               
+                // Escreve os valores das propriedades encontradas
+                ltrCookie.Text = valores;
+            }
+            else ltrCookie.Text = string.Empty;
+        }
+        private HttpCookie ObterRequisicaoCookie(string nomeCookie)
+        {
+            try
+            {
+                // Retornando o cookie caso exista
+                return this.Page.Request.Cookies[nomeCookie];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        protected void btnLer_Click(object sender, EventArgs e)
+        {
+            getPropriedadesCookie("login");
+        }
+
     }
 }
+
 

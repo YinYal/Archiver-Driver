@@ -34,22 +34,30 @@ namespace ProjetoFinal
 
         protected void btCadastrar_Click(object sender, EventArgs e)
         {
-            System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
-            System.Configuration.ConnectionStringSettings connString;
-            connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = connString.ToString();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Insert into client (name,email,password) values (@name,@email,@password)";
-            cmd.Parameters.AddWithValue("name", tbName.Text);
-            cmd.Parameters.AddWithValue("email", tbEmail.Text);
-            cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
+                System.Configuration.ConnectionStringSettings connString;
+                connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = connString.ToString();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "Insert into client (name,email,password) values (@name,@email,@password)";
+                cmd.Parameters.AddWithValue("name", tbName.Text);
+                cmd.Parameters.AddWithValue("email", tbEmail.Text);
+                cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-            Response.Redirect("~/login.aspx");
+                Response.Redirect("~/login.aspx");
+            }
+            catch
+            {
+                Response.Write("<script> alert('Email já está em uso');</script>");
+            }
+           
         }
     }
 }
