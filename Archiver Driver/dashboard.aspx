@@ -4,9 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [email], [name], [password], [adm] FROM [client]" DeleteCommand="DELETE FROM [client] WHERE [email] = @email" InsertCommand="INSERT INTO [client] ([email], [name], [password], [adm]) VALUES (@email, @name, @password, @adm)" UpdateCommand="UPDATE [client] SET [name] = @name, [password] = @password, [adm] = @adm WHERE [email] = @email">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [email], [name], [password], [adm] FROM [client]" DeleteCommand="DELETE FROM [client] WHERE [Id] = @Id" InsertCommand="INSERT INTO [client] ([email], [name], [password], [adm]) VALUES (@email, @name, @password, @adm)" UpdateCommand="UPDATE [client] SET [email] = @email, [name] = @name, [password] = @password, [adm] = @adm WHERE [Id] = @Id">
         <DeleteParameters>
-            <asp:Parameter Name="email" Type="String" />
+            <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="email" Type="String" />
@@ -15,10 +15,11 @@
             <asp:Parameter Name="adm" Type="Boolean" />
         </InsertParameters>
         <UpdateParameters>
+            <asp:Parameter Name="email" Type="String" />
             <asp:Parameter Name="name" Type="String" />
             <asp:Parameter Name="password" Type="String" />
             <asp:Parameter Name="adm" Type="Boolean" />
-            <asp:Parameter Name="email" Type="String" />
+            <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [email], [name], [tell], [subject], [message] FROM [contacts]" DeleteCommand="DELETE FROM [contacts] WHERE [Id] = @Id" InsertCommand="INSERT INTO [contacts] ([email], [name], [tell], [subject], [message]) VALUES (@email, @name, @tell, @subject, @message)" UpdateCommand="UPDATE [contacts] SET [email] = @email, [name] = @name, [tell] = @tell, [subject] = @subject, [message] = @message WHERE [Id] = @Id">
@@ -41,23 +42,23 @@
             <asp:Parameter Name="Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [idDoc], [idUser], [title], [path], [type], [date] FROM [doc]" DeleteCommand="DELETE FROM [doc] WHERE [idDoc] = @idDoc" InsertCommand="INSERT INTO [doc] ([idUser], [title], [path], [type], [date]) VALUES (@idUser, @title, @path, @type, @date)" UpdateCommand="UPDATE [doc] SET [idUser] = @idUser, [title] = @title, [path] = @path, [type] = @type, [date] = @date WHERE [idDoc] = @idDoc">
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [idDoc], [idUser], [title], [type], [path], [date] FROM [doc]" DeleteCommand="DELETE FROM [doc] WHERE [idDoc] = @idDoc" InsertCommand="INSERT INTO [doc] ([idUser], [title], [type], [path], [date]) VALUES (@idUser, @title, @type, @path, @date)" UpdateCommand="UPDATE [doc] SET [idUser] = @idUser, [title] = @title, [type] = @type, [path] = @path, [date] = @date WHERE [idDoc] = @idDoc">
         <DeleteParameters>
             <asp:Parameter Name="idDoc" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="idUser" Type="String" />
             <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="path" Type="String" />
             <asp:Parameter Name="type" Type="String" />
-            <asp:Parameter DbType="Date" Name="date" />
+            <asp:Parameter Name="path" Type="String" />
+            <asp:Parameter Name="date" Type="DateTime" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="idUser" Type="String" />
             <asp:Parameter Name="title" Type="String" />
-            <asp:Parameter Name="path" Type="String" />
             <asp:Parameter Name="type" Type="String" />
-            <asp:Parameter DbType="Date" Name="date" />
+            <asp:Parameter Name="path" Type="String" />
+            <asp:Parameter Name="date" Type="DateTime" />
             <asp:Parameter Name="idDoc" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
@@ -70,11 +71,12 @@
 
         <h2>Tabela de Usuario </h2>
 
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="email" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="email" HeaderText="email" ReadOnly="True" SortExpression="email" />
+                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False" />
+                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                 <asp:CheckBoxField DataField="adm" HeaderText="adm" SortExpression="adm" />
@@ -129,8 +131,8 @@
                 <asp:BoundField DataField="idDoc" HeaderText="idDoc" InsertVisible="False" ReadOnly="True" SortExpression="idDoc" />
                 <asp:BoundField DataField="idUser" HeaderText="idUser" SortExpression="idUser" />
                 <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-                <asp:BoundField DataField="path" HeaderText="path" SortExpression="path" />
                 <asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
+                <asp:BoundField DataField="path" HeaderText="path" SortExpression="path" />
                 <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
