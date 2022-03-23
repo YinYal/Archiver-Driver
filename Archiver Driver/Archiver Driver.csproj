@@ -74,6 +74,7 @@
     <Content Include="assets\6692775.jpg" />
     <Content Include="assets\background.jpeg" />
     <Content Include="assets\favicon.ico" />
+    <Content Include="assets\oks.png" />
     <Content Include="assets\workers-at-an-it-company-working-on-a-computer.jpg" />
     <Content Include="dashboard.aspx" />
     <Content Include="register.aspx" />

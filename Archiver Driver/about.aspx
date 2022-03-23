@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <main class="mt-3">
+    <main class="mt-3 fs-5">
         <div class="container-fluid d-block">
             <div class="img-thumbnail text-center col-5 float-start me-2">
                 <img class="rounded img-fluid" src="assets/workers-at-an-it-company-working-on-a-computer.jpg" alt="Desenvolvedores da Woop!Applications" />
@@ -14,7 +14,8 @@
             <div class="">
                 <h2 class="text-center mb-2">Sobre nós</h2>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nós somos a <a href="https://github.com/YinYal" target="_blank"><strong>Woop! Applications</strong></a> uma empresa nascida no Senac com o intuito de desenvolver ferramentas mais objetivas e mais simples.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nós somos a <a href="https://github.com/YinYal" target="_blank"><strong>Woop! Applications</strong></a> uma empresa nascida no Senac com o intuito de desenvolver ferramentas mais objetivas e mais simples. Somos 5 desesenvolvedores que 
+                    não entendiam nada de programação e bem pouco sobre computadores e afins, mas mesmo assim nos empenhamos e demos o nosso melhor para desenvolvermos o melhor trabalho possivel.
 
                 </p>
             </div>

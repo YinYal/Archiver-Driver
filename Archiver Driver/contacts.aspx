@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Faça contato</h2>
+    <h2 class="pt-3">Faça contato</h2>
 
     <div action="#" id="contact" name="contact" method="post">
 
@@ -11,7 +11,7 @@
 
         <p class="red center small">Todos os campos são obrigatórios.</p>
 
-        <div class="form-control">
+        <div class="form-control pb-5">
             <label class="form-label">Nome completo:</label>
             <asp:TextBox ID="contactName" CssClass="form-control" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="reqMin" runat="server" ControlToValidate="contactName" Display="None" />

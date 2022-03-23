@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/oks.png" />
     <link href="css/global.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -17,7 +17,8 @@
     <!-- Barra de navegação responsiva -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.aspx">Archiver Driver</a>
+            <a href="index.aspx" class="pe-3 ps-1"><img src="assets/oks.png" width="50" height="50" /></a>
+            <a class="navbar-brand" href="index.aspx"><strong>Archiver Driver</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-6 text-uppercase">
