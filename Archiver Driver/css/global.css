@@ -1,14 +1,24 @@
-﻿:{
-    font-size:16px;
+﻿: {
+    font-size: 16px;
 }
-body a{
-    text-decoration:inherit;
+
+body a {
+    text-decoration: inherit;
 }
 
 #glass {
     background: rgb(255,255,255,0.1);
 }
+
 #bg-body {
-    background-image: url(../assets/background.jpeg); 
+    background-image: url(../assets/background.jpeg);
     border-image-width: auto
+}
+
+.box-cookies.hide {
+    display: none !important;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, div, span, strong {
+    font-family: "Lucida Console", "Courier New", monospace;
 }

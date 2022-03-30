@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cadastro</title>
+    <title>Cadastro - Archiver Driver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favcon.ico" />
 </head>
 <body id="bg-body">
     <!-- Configurações de tamanho da página e ajuste da janela do "meio" -->
