@@ -5,24 +5,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [doc] WHERE [idUser] = @idUser" InsertCommand="INSERT INTO [doc] ([title], [ex], [path]) VALUES (@title, @ex, @path)" SelectCommand="SELECT [idUser], [title], [ex], [path] FROM [doc]" UpdateCommand="UPDATE [doc] SET [title] = @title, [ex] = @ex, [path] = @path WHERE [idUser] = @idUser">
-            <DeleteParameters>
-                <asp:Parameter Name="idUser" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="title" Type="String" />
-                <asp:Parameter Name="ex" Type="String" />
-                <asp:Parameter Name="path" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="title" Type="String" />
-                <asp:Parameter Name="ex" Type="String" />
-                <asp:Parameter Name="path" Type="String" />
-                <asp:Parameter Name="idUser" Type="Int32" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [type], [path], [date], [idDoc] FROM [doc]">
+    </asp:SqlDataSource>
 
-    <div class="d-md-flex d-block">
+    <div class="d-md-flex d-block pt-1">
         <!-- Barra lateral da aplicação -->
         <aside class="col-md-3 d-md-block d-grid border p-3 pt-4">
 
@@ -40,22 +26,55 @@
                 <input id="oFile" type="file" class="form-control form-control-sm" accept="application/pdf" runat="server" name="oFile" />
                 <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server" OnClick="btnUpload_Click1"></asp:Button>
                 <asp:Panel ID="frmConfirmation" Visible="False" runat="server">
-                <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
-                <asp:Label ID="LblCookie" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
+                    <asp:Label ID="LblCookie" runat="server" Visible="false"></asp:Label>
                 </asp:Panel>
             </div>
 
             <!-- Conteúdo da página  -->
         </aside>
+
         <div class="container-fluid text-md-center pt-4">
-            <article>
-                <h2>Página inicial</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut viverra nisi. Vestibulum sagittis rhoncus sagittis. Duis elementum, justo ultricies aliquet mattis, lacus ex maximus odio, sed interdum mauris justo eu nisl. Maecenas ac vulputate arcu. Vivamus at massa vehicula, rhoncus urna a, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae odio et orci congue tincidunt in in diam. Suspendisse ullamcorper, augue in mattis euismod, dui metus placerat mauris, in volutpat ante nunc eu odio. Nunc finibus leo neque. Sed porta leo nec porta viverra. Aenean tincidunt ante at magna gravida, eget rhoncus massa venenatis. Morbi in orci tristique, tempor arcu non, finibus odio. Vivamus auctor a diam pharetra consequat. Aenean lacus enim, vulputate in aliquet et, luctus ultrices purus. Nunc eu dolor sit amet nibh volutpat gravida.</p>
+
+            <article class="col-4 w-100 gView">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="true" CssClass="gridview"
+                    EmptyDataText="Sem arquivos salvos" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <Columns>
+                        <asp:BoundField DataField="Text" HeaderText="File Name" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkDownload" Text="Download" CommandArgument='<%# Eval("Value") %>' runat="server" OnClick="DownloadFile"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkDelete" Text="Delete" CommandArgument='<%# Eval("Value") %>' runat="server" OnClick="DeleteFile" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkAlt" Text="Alterar" CommandArgument='<%# Eval("Value") %>' runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkView" Text="Ver" CommandArgument='<%# Eval("Value") %>' runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    <PagerStyle CssClass="gridview_pager"></PagerStyle>
+                </asp:GridView>
             </article>
         </div>
     </div>

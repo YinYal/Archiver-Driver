@@ -12,6 +12,8 @@ namespace ProjetoFinal
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Cookies["login"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["id_user"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["nameC"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("~/login.aspx");
         }
     }

@@ -11,7 +11,10 @@ namespace Archiver_Driver
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           /* if (CookieParameter.pefil==1)
+            {
+                lblDashboard.Visible = true;
+            }*/
         }
 
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)

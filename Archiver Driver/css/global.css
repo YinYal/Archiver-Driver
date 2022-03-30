@@ -1,4 +1,18 @@
-﻿: {
+﻿html, body {
+    position:relative;
+    height:100%;
+}
+body{
+    display:flex;
+    flex-direction:column;
+}
+main{
+    flex-grow:1;
+}
+.gView {
+    overflow: auto;
+}
+: {
     font-size: 16px;
 }
 
@@ -19,6 +33,59 @@ body a {
     display: none !important;
 }
 
-p, a, h1, h2, h3, h4, h5, h6, div, span, strong {
-    font-family: "Lucida Console", "Courier New", monospace;
+
+
+.gridview {
+    width: 100%;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    min-width:500px;
 }
+
+    .gridview td {
+        padding: 2px;
+        border: solid 1px #c1c1c1;
+        color: #717171;
+    }
+
+    .gridview th {
+        padding: 4px 2px;
+        color: #fff;
+        background: #424242;
+        border-left: solid 1px #525252;
+        font-size: 0.9em;
+    }
+
+    .gridview .gridview_alter {
+        background: #E7E7E7;
+    }
+
+    .gridview .gridview_pager {
+        background: #424242;
+    }
+
+        .gridview .gridview_pager table {
+            margin: 5px 0;
+        }
+
+        .gridview .gridview_pager td {
+            border-width: 0;
+            padding: 0 6px;
+            border-left: solid 1px #666;
+            font-weight: bold;
+            color: #fff;
+            line-height: 12px;
+        }
+
+        .gridview .gridview_pager a {
+            color: #666;
+            text-decoration: none;
+        }
+
+            .gridview .gridview_pager a:hover {
+                color: #000;
+                text-decoration: none;
+            }
+

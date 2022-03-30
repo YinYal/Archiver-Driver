@@ -55,12 +55,33 @@ namespace ProjetoFinal
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
-                HttpCookie login = new HttpCookie("login", tbEmail.Text);
+                // Fez a leitura de todas as linha encontradas no banco
+                registro.Read();
+                //Cria o cookie do Login Com email do Banco de Dados
+                string loginCookie = registro["email"].ToString();
+                HttpCookie login = new HttpCookie("login", loginCookie);
                 Response.Cookies.Add(login);
+
+                //Cria o cookie do id do usuário
+                string IdUserCookie = registro["Id"].ToString();
+                // Preaparaçao para o Navegador
+                HttpCookie IdUser = new HttpCookie("id_user", IdUserCookie);
+                // Inserção do cookie no navegador
+                Response.Cookies.Add(IdUser);
+
+                //Cria o cookie do id do usuário
+                string nomeCookie = registro["name"].ToString(); // Resgata no Banco
+                HttpCookie nomeC = new HttpCookie("nameC", nomeCookie);
+                Response.Cookies.Add(nomeC);
+
+                //string cookie = Request.Cookies["login"];
+
+                //direcionar para a pagina principal
                 Response.Redirect("~/index.aspx");
             }
             else
             {
+                // Alert Javascript
                 Response.Write("<script> alert('Email ou Senha Incorretos!');</script>");
             }
         }
