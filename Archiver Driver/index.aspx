@@ -5,8 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [type], [path], [date], [idDoc] FROM [doc]">
-    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [type], [path], [date], [idDoc] FROM [doc]"></asp:SqlDataSource>
 
     <div class="d-md-flex d-block pt-1">
         <!-- Barra lateral da aplicação -->
@@ -27,54 +26,30 @@
                 <asp:Button ID="btnUpload" CssClass="btn btn-secondary mt-2 text-center btn-sm" type="submit" Text="Upload" runat="server" OnClick="btnUpload_Click1"></asp:Button>
                 <asp:Panel ID="frmConfirmation" Visible="False" runat="server">
                     <asp:Label ID="lblUploadResult" runat="server"></asp:Label>
-                    <asp:Label ID="LblCookie" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="ltriduser" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="ltrCookie" runat="server" Visible="false"></asp:Label>
                 </asp:Panel>
             </div>
 
             <!-- Conteúdo da página  -->
         </aside>
 
-        <div class="container-fluid text-md-center pt-4">
+        <div class="container-fluid ">
 
-            <article class="col-4 w-100 gView">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="true" CssClass="gridview"
-                    EmptyDataText="Sem arquivos salvos" CellPadding="4" ForeColor="#333333" GridLines="None">
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                    <Columns>
-                        <asp:BoundField DataField="Text" HeaderText="File Name" />
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:LinkButton ID="lnkDownload" Text="Download" CommandArgument='<%# Eval("Value") %>' runat="server" OnClick="DownloadFile"></asp:LinkButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:LinkButton ID="lnkDelete" Text="Delete" CommandArgument='<%# Eval("Value") %>' runat="server" OnClick="DeleteFile" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:LinkButton ID="lnkAlt" Text="Alterar" CommandArgument='<%# Eval("Value") %>' runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:LinkButton ID="lnkView" Text="Ver" CommandArgument='<%# Eval("Value") %>' runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Columns>
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                    <PagerStyle CssClass="gridview_pager"></PagerStyle>
-                </asp:GridView>
+            <article>
+
+                <asp:Label ID="managerCookie" runat="server" Text="" Visible="false"></asp:Label>
+
+                <div style="overflow:auto;">
+                <table style="width:100%">
+                    <tr>
+                        <th>Data</th>
+                        <th>Título</th>
+                        <th>Download</th>
+                        <th>Remover</th>
+                    </tr>
+                    <div id="row_table" runat="server"></div>
+                </table>
             </article>
         </div>
     </div>

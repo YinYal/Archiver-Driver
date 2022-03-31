@@ -14,6 +14,7 @@ namespace ProjetoFinal
             Response.Cookies["login"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["id_user"].Expires = DateTime.Now.AddDays(-1);
             Response.Cookies["nameC"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["admC"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("~/login.aspx");
         }
     }

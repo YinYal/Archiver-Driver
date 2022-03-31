@@ -69,10 +69,14 @@ namespace ProjetoFinal
                 // Inserção do cookie no navegador
                 Response.Cookies.Add(IdUser);
 
-                //Cria o cookie do id do usuário
+                //Cria o cookie do nome do usuario
                 string nomeCookie = registro["name"].ToString(); // Resgata no Banco
                 HttpCookie nomeC = new HttpCookie("nameC", nomeCookie);
                 Response.Cookies.Add(nomeC);
+
+                string admCookie = registro["adm"].ToString(); // Resgata no Banco
+                HttpCookie admC = new HttpCookie("admC", admCookie);
+                Response.Cookies.Add(admC);
 
                 //string cookie = Request.Cookies["login"];
 

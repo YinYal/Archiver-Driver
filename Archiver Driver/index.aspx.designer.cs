@@ -60,21 +60,39 @@ namespace Archiver_Driver
         protected global::System.Web.UI.WebControls.Label lblUploadResult;
 
         /// <summary>
-        /// Controle LblCookie.
+        /// Controle ltriduser.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCookie;
+        protected global::System.Web.UI.WebControls.Label ltriduser;
 
         /// <summary>
-        /// Controle GridView1.
+        /// Controle ltrCookie.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label ltrCookie;
+
+        /// <summary>
+        /// Controle managerCookie.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label managerCookie;
+
+        /// <summary>
+        /// Controle row_table.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl row_table;
     }
 }

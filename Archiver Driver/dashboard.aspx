@@ -93,6 +93,7 @@
                 <SortedDescendingHeaderStyle BackColor="#15524A" />
             </asp:GridView>
         </div>
+        <asp:Label ID="Label1" runat="server" Visible="false" ></asp:Label>
 
         <br />
 
@@ -109,35 +110,6 @@
                     <asp:BoundField DataField="tell" HeaderText="tell" SortExpression="tell" />
                     <asp:BoundField DataField="subject" HeaderText="subject" SortExpression="subject" />
                     <asp:BoundField DataField="message" HeaderText="message" SortExpression="message" />
-                </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
-            </asp:GridView>
-        </div>
-
-        <br />
-
-        <h2>Tabela de Documentos</h2>
-
-        <div class="gView d-flex justify-content-md-center">
-            <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idDoc" DataSourceID="SqlDataSource3" ForeColor="#333333" GridLines="None">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                    <asp:BoundField DataField="idDoc" HeaderText="idDoc" InsertVisible="False" ReadOnly="True" SortExpression="idDoc" />
-                    <asp:BoundField DataField="idUser" HeaderText="idUser" SortExpression="idUser" />
-                    <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-                    <asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
-                    <asp:BoundField DataField="path" HeaderText="path" SortExpression="path" />
-                    <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
                 </Columns>
                 <EditRowStyle BackColor="#7C6F57" />
                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

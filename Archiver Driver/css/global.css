@@ -1,17 +1,21 @@
 ﻿html, body {
-    position:relative;
-    height:100%;
+    position: relative;
+    height: 100%;
 }
-body{
-    display:flex;
-    flex-direction:column;
+
+body {
+    display: flex;
+    flex-direction: column;
 }
-main{
-    flex-grow:1;
+
+main {
+    flex-grow: 1;
 }
+
 .gView {
     overflow: auto;
 }
+
 : {
     font-size: 16px;
 }
@@ -41,7 +45,7 @@ body a {
     margin: 5px 0 10px 0;
     border: solid 1px #525252;
     border-collapse: collapse;
-    min-width:500px;
+    min-width: 500px;
 }
 
     .gridview td {
@@ -88,4 +92,3 @@ body a {
                 color: #000;
                 text-decoration: none;
             }
-
