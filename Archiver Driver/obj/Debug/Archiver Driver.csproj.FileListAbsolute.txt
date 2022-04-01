@@ -410,7 +410,6 @@ C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\De
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
 C:\Users\barth\OneDrive\Área de Trabalho\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb
-C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache
 C:\Users\36127962021.1\source\repos\Archiver-Driver\Archiver Driver\bin\Archiver Driver.dll.config
 C:\Users\36127962021.1\source\repos\Archiver-Driver\Archiver Driver\bin\Archiver Driver.dll
 C:\Users\36127962021.1\source\repos\Archiver-Driver\Archiver Driver\bin\Archiver Driver.pdb
@@ -587,3 +586,4 @@ C:\Users\36127962021.1\Projetos\DID\Archiver-Driver\Archiver Driver\obj\Debug\Ar
 C:\Users\36127962021.1\Projetos\DID\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.CopyComplete
 C:\Users\36127962021.1\Projetos\DID\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.dll
 C:\Users\36127962021.1\Projetos\DID\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.pdb
+C:\Users\36127962021.1\Projetos\Archiver-Driver\Archiver Driver\obj\Debug\Archiver Driver.csproj.AssemblyReference.cache

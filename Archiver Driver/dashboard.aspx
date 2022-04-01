@@ -66,12 +66,12 @@
 
     <br />
 
-    <div class="container-fluid text-center">
+    <div class="text-center">
 
-        <h2>Tabela de Usuario </h2>
+        <div class="form-control bg-secondary">
+            <h2 class="text-light pb-2">Tabela de Usuario </h2>
 
-        <div class="gView d-flex justify-content-md-center">
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -81,26 +81,16 @@
                     <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                     <asp:CheckBoxField DataField="adm" HeaderText="adm" SortExpression="adm" />
                 </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
             </asp:GridView>
         </div>
-        <asp:Label ID="Label1" runat="server" Visible="false" ></asp:Label>
+        <asp:Label ID="Label1" runat="server" Visible="false"></asp:Label>
 
         <br />
 
-        <h2>Tabela de contato</h2>
+        <div class="form-control bg-secondary">
+            <h2 class="text-light pb-2">Tabela de contato</h2>
 
-        <div class="gView d-flex justify-content-md-center">
-            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -124,11 +114,13 @@
             </asp:GridView>
         </div>
 
-        <br />
 
-        <h2>Tabela de logs</h2>
-        <div class="gView d-flex justify-content-md-center">
-            <asp:GridView ID="GridView4" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idLog" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None">
+    <br />
+
+    <div class="form-control bg-secondary">
+        <h2 class="text-light pb-2">Tabela de logs</h2>
+
+            <asp:GridView ID="GridView4" runat="server" AllowPaging="True" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idLog" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="idLog" HeaderText="idLog" InsertVisible="False" ReadOnly="True" SortExpression="idLog" />
@@ -140,7 +132,7 @@
                 <EditRowStyle BackColor="#7C6F57" />
                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <PagerStyle BackColor="#666666"  ForeColor="Black" HorizontalAlign="Center" />
                 <RowStyle BackColor="#E3EAEB" />
                 <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                 <SortedAscendingCellStyle BackColor="#F8FAFA" />

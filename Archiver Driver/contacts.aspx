@@ -30,10 +30,13 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="contactSubject" Display="None" />
 
             <label class="form-label">Mensagem:</label>
-            <asp:TextBox ID="contactMessage" runat="server" CssClass="form-control col-3 mb-4" Height="67px" TextMode="MultiLine" Columns="50" Rows="5" MaxLength="120"></asp:TextBox>
+            <asp:TextBox ID="contactMessage" runat="server" CssClass="form-control col-3 mb-4" Height="67px" TextMode="MultiLine" Columns="50" Rows="5" MaxLength="500"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="contactMessage" Display="None" />
 
-            <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Text="Enviar" />
+            <div class="text-center pt-3">
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary w-10 me-5" OnClick="Button1_Click" Text="Enviar" />
+                <asp:Button ID="Button2" runat="server" CssClass="btn btn-danger w-10 ms-5" OnClick="Button2_Click" Text="Limpar" />
+            </div>
         </div>
     </div>
 </asp:Content>

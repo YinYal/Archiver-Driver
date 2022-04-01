@@ -54,5 +54,14 @@ namespace Archiver_Driver
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            contactName.Text = string.Empty;
+            contactEmail.Text = string.Empty;
+            contactTell.Text = string.Empty;
+            contactSubject.Text = string.Empty;
+            contactMessage.Text = string.Empty;
+        }
     }
 }

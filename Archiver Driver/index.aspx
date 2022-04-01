@@ -7,7 +7,7 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [type], [path], [date], [idDoc] FROM [doc]"></asp:SqlDataSource>
 
-    <div class="d-md-flex d-block pt-1">
+    <div class="d-md-flex d-block pt-3">
         <!-- Barra lateral da aplicação -->
         <aside class="col-md-3 d-md-block d-grid border p-3 pt-4">
 
@@ -33,24 +33,21 @@
 
             <!-- Conteúdo da página  -->
         </aside>
-
-        <div class="container-fluid ">
-
-            <article>
-
-                <asp:Label ID="managerCookie" runat="server" Text="" Visible="false"></asp:Label>
-
-                <div style="overflow:auto;">
-                <table style="width:100%">
+        <article class="container-fluid">
+            <asp:Label ID="managerCookie" runat="server" Text="" Visible="false"></asp:Label>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover table-bordered table-sm align-middle caption-top">
+                    <caption class="font-weight-bold">Lista de Arquivos do usuário</caption>
                     <tr>
-                        <th>Data</th>
                         <th>Título</th>
+                        <th>Data</th>
                         <th>Download</th>
                         <th>Remover</th>
                     </tr>
-                    <div id="row_table" runat="server"></div>
+                    <div id="row_table" runat="server">
+                    </div>
                 </table>
-            </article>
-        </div>
+            </div>
+        </article>
     </div>
 </asp:Content>
