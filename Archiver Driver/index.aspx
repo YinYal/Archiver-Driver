@@ -35,6 +35,7 @@
         </aside>
         <article class="container-fluid">
             <asp:Label ID="managerCookie" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Label ID="lblAlt" runat="server"></asp:Label>
             <div class="table-responsive">
                 <table class="table table-dark table-hover table-bordered table-sm align-middle caption-top">
                     <caption class="font-weight-bold">Lista de Arquivos do usuário</caption>
@@ -43,6 +44,7 @@
                         <th>Data</th>
                         <th>Download</th>
                         <th>Remover</th>
+                        <th>Alterar</th>
                     </tr>
                     <div id="row_table" runat="server">
                     </div>

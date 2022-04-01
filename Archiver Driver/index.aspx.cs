@@ -34,10 +34,10 @@ namespace Archiver_Driver
                 string dateDoc = "<td class='wi-50 ps-2'>" + registro["date"].ToString() + "</td>";
                 string titleDoc = "<td>" + registro["title"].ToString() + "</td>";
                 string pathDoc = "<td class='w-10'><a class='btn btn-primary w-100' target='_blank' href='uploads/" + registro["path"].ToString() + "'>Download</a></td>";
-                string remove = "<td class='w-10'><a class='btn btn-danger w-100' href='delete.aspx?id=" + registro["idDoc"].ToString() + "'>Remover</a></td></tr>";
+                string remove = "<td class='w-10'><a class='btn btn-danger w-100' href='delete.aspx?id=" + registro["idDoc"].ToString() + "'>Remover</a></td>";
+                string altDoc = "<td class='w-10'><a class='btn btn-success w-100' target='_blank' href='alt.aspx?id=" + registro["title"].ToString() + "' > Alterar</a></td></tr>";
 
-
-                row_table.InnerHtml += titleDoc + dateDoc + pathDoc + remove;
+                row_table.InnerHtml += titleDoc + dateDoc + pathDoc + remove + altDoc;
             }
             con.Close();
 
