@@ -36,8 +36,6 @@
                             <div class="text-center">
                                 <asp:Button ID="btnlogar" CssClass="btn btn-primary" runat="server" Text="Entrar" OnClick="Btnlogar_Click" />
                                 <br />
-                                <input class="form-check-input mb-4" type="checkbox" value="" id="checkbox" />
-                                <label class="form-check-label" for="flexCheckDefault">Mantenha-me conectado</label>
                                 <p class="link">
                                     Ainda não tem conta?
                                     <br />

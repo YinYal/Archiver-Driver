@@ -49,7 +49,7 @@ namespace Archiver_Driver
             cmd.CommandText = "Update client set password = @altPass where email = @email";
 
             // Varáveis do banco de dados iniciado por @ arroba
-            cmd.Parameters.AddWithValue("altPass", sha256_hash(tbSenha.Text));
+            cmd.Parameters.AddWithValue("altPass", sha256_hash(tbPass.Text));
             cmd.Parameters.AddWithValue("email", ltrCookie.Text);
             con.Open();
             cmd.ExecuteNonQuery();
@@ -108,6 +108,42 @@ namespace Archiver_Driver
             getPropriedadesCookie("login");
         }
 
+        protected void btAttName_Click(object sender, EventArgs e)
+        {
+            System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
+            // Criado pelo SQL Data Source
+            System.Configuration.ConnectionStringSettings connString;
+            connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+            //cria um objeto de conexão
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connString.ToString();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            // Chamada da Update pelo SQL tabela usuario tabela senha quando email for igual o email do cookie
+            cmd.CommandText = "Update client set name = @name where email = @email";
 
+            // Varáveis do banco de dados iniciado por @ arroba
+            cmd.Parameters.AddWithValue("name", tbUser.Text);
+            cmd.Parameters.AddWithValue("email", ltrCookie.Text);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            // Alert Javascript
+            Response.Write("<script> alert('Nome de Usuário trocado com sucesso!');</script>");
+        }
+
+        protected void btClear_Click(object sender, EventArgs e)
+        {
+            tbPass.Text = string.Empty;
+            tbConfiPass.Text = string.Empty;
+        }
+
+        protected void btClear1_Click(object sender, EventArgs e)
+        {
+            tbUser.Text = string.Empty;
+            tbtConfiUser.Text = string.Empty;
+
+        }
     }
 }

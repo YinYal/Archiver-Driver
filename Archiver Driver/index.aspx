@@ -39,7 +39,7 @@
             <div class="table-responsive">
                 <table class="table table-dark table-hover table-bordered table-sm align-middle caption-top">
                     <caption class="font-weight-bold">Lista de Arquivos do usuário</caption>
-                    <tr>
+                    <tr class="text-center">
                         <th>Título</th>
                         <th>Data</th>
                         <th>Download</th>

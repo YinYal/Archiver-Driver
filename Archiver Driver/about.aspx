@@ -30,21 +30,6 @@
                 </p>
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-
-            <div class="rounded-pill bg-dark p-1 mt-2 d-flex align-items-center fw-bolder">
-                <img src="assets/herick bartholo.jpeg" alt="Herick Bartholo" class="rounded-circle me-1" height="80" width="80" />
-                <p class="text-white">Olá, Me chamo Herick Bartholo e essas são minhas redes de contato:</p>
-                <a href="https://github.com/YinYal" class="d-inline d-none"><i class="fab fa-github-square"></i> GitHub.com</a>
-                <a href="#" class="d-inline d-none">A</a>
-            </div>
-
-            <div class="rounded-pill bg-dark p-1 mt-2 d-flex align-items-center fw-bolder">
-                <img src="assets/matheus allen.jpeg" alt="Matheus Allen" class="rounded-circle me-1" height="80" width="80" />
-                <p class="text-white">Meu nome é Matheus Allen, minhas redes para contato:</p>
-                <a href="https://github.com/Matheus-Allen" class="d-inline d-none"><i class="fab fa-github-square"></i> GitHub.com</a>
-                <a href="https://linkedin.com/in/matheus-allen-a1453017b" class="d-inline d-none"><i class="fab fa-linkedin"></i> Linkedin.com</a>
-            </div>
         </div>
     </main>
 </asp:Content>

@@ -4,15 +4,16 @@
     <title>Faça contato - Archiver Driver</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="pt-3">Faça contato</h2>
+    <h2 class="pt-3 text-center">Faça contato</h2>
 
     <div action="#" id="contact" name="contact" method="post">
 
-        <p>Preencha os campos abaixo para entrar em contato com a equipe do aplicativo.</p>
 
-        <p class="red center small">Todos os campos são obrigatórios.</p>
+        <div class="form-control pb-5 bg-light">
+            <p>Preencha todos os campos abaixo para entrar em contato com a equipe do aplicativo.</p>
 
-        <div class="form-control pb-5">
+            <p class="red center small">Todos os campos são obrigatórios.</p>
+
             <label class="form-label">Nome completo:</label>
             <asp:TextBox ID="contactName" CssClass="form-control" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="reqMin" runat="server" ControlToValidate="contactName" Display="None" />
@@ -34,8 +35,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="contactMessage" Display="None" />
 
             <div class="text-center pt-3">
-                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary w-10 me-5" OnClick="Button1_Click" Text="Enviar" />
-                <asp:Button ID="Button2" runat="server" CssClass="btn btn-danger w-10 ms-5" OnClick="Button2_Click" Text="Limpar" />
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary btn-lg me-4" OnClick="Button1_Click" Text="Enviar" />
+                <asp:Button ID="Button2" runat="server" CssClass="btn btn-danger btn-lg ms-4" OnClick="Button2_Click" Text="Limpar" />
             </div>
         </div>
     </div>

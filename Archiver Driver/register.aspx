@@ -43,7 +43,7 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbPass" Display="None" />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group">
                             <label for="confsenhacad">Confirme sua senha:</label>
                             <br />
                             <asp:TextBox ID="tbPassconfi" runat="server" TextMode="Password" CssClass="form-control" Width="254px"></asp:TextBox>
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="text-center">
-                            <asp:CompareValidator ID="CompareValidator1" runat="server" CssClass="text-danger" ControlToCompare="tbPass" ControlToValidate="tbPassconfi" ErrorMessage="Senha Incorreta !!"></asp:CompareValidator>
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" CssClass="text-danger" ControlToCompare="tbPass" ControlToValidate="tbPassconfi" ErrorMessage="As senhas não coincidem!!!!"></asp:CompareValidator>
                             <br />
                             <asp:Button ID="btCadastrar" CssClass="btn btn-primary" runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
 
