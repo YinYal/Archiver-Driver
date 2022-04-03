@@ -55,6 +55,21 @@ namespace Archiver_Driver
             cmd.ExecuteNonQuery();
             con.Close();
 
+            System.Configuration.ConnectionStringSettings connString2;
+            connString2 = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+
+            SqlConnection con2 = new SqlConnection();
+            con2.ConnectionString = connString2.ToString();
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.Connection = con2;
+
+            cmd2.CommandText = "Insert into logUser (old, new, idUser) values (@old, @new, @idUser)";
+            cmd2.Parameters.AddWithValue("idUser", ltrCookie.Text);
+            cmd2.Parameters.AddWithValue("new", sha256_hash(tbPass.Text));
+            con2.Open();
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+            Response.Redirect("~/index.aspx");
             // Alert Javascript
             Response.Write("<script> alert('Senha Alterada com Sucesso!');</script>");
         }
