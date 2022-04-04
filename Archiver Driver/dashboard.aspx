@@ -66,7 +66,7 @@
 
     <br />
 
-    <div class="text-center">
+    <div class="text-center mb-3">
 
         <div class="form-control bg-secondary">
             <h2 class="text-light pb-2">Tabela de Usuario </h2>

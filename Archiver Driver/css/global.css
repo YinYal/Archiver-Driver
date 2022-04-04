@@ -100,3 +100,16 @@ body a {
 .wi50 {
     width: 160px;
 }
+.pF::first-letter{
+    font-size:150%;
+    margin-right:5px;
+    color:red;
+}
+.pF {
+    text-indent: 50px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.item{
+    place-items:center;
+}

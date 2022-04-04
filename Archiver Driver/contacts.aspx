@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="pt-3 text-center">Faça contato</h2>
 
-    <div action="#" id="contact" name="contact" method="post">
+    <div action="#" class="mb-3" id="contact" name="contact" method="post">
 
 
         <div class="form-control pb-5 bg-light">

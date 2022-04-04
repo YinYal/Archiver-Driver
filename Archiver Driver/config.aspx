@@ -35,7 +35,7 @@
 
 
 
-    <div class="form-control mt-4 bg-light">
+    <div class="form-control mt-4 bg-light mb-3">
         <h3>Alterar nome do usuário</h3>
         <p>Precisamos que preencha os campos abaixo. Caso tenha algum problema com a alteração do seu nome, favor entrar em contato conosco na aba de <a href="contacts.aspx">contato</a>.</p>
 

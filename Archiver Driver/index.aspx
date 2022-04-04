@@ -7,7 +7,7 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [title], [type], [path], [date], [idDoc] FROM [doc]"></asp:SqlDataSource>
 
-    <div class="d-md-flex d-block pt-3">
+    <div class="d-md-flex d-block pt-3 container-fluid">
         <!-- Barra lateral da aplicação -->
         <aside class="col-md-3 d-md-block d-grid border p-3 pt-4">
 

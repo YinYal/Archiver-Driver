@@ -31,13 +31,13 @@ namespace Archiver_Driver
 
             while (registro.Read())
             {
-                string dateDoc = "<td class='wi-50 ps-2'>" + registro["date"].ToString() + "</td>";
+                string dateDoc = "<td class='wi50 ps-2'>" + registro["date"].ToString() + "</td>";
                 string titleDoc = "<td>" + registro["title"].ToString() + "</td>";
                 string pathDoc = "<td class='w-10'><a class='btn btn-primary w-100' target='_blank' href='uploads/" + registro["path"].ToString() + "'>Download</a></td>";
                 string remove = "<td class='w-10'><a class='btn btn-danger w-100' href='delete.aspx?id=" + registro["idDoc"].ToString() + "'>Remover</a></td>";
-                string altDoc = "<td class='w-10'><a class='btn btn-success w-100' href='alt.aspx?id=" + registro["idDoc"].ToString() + "' > Alterar</a></td></tr>";
+                string altDoc = "<td class='w-10'><a class='btn btn-success w-100' href='alt.aspx?id=" + registro["idDoc"].ToString() + "' > Alterar</a></td>";
 
-                row_table.InnerHtml += titleDoc + dateDoc + pathDoc + remove + altDoc;
+                row_table.InnerHtml += "<div>"+ titleDoc + dateDoc + pathDoc + remove + altDoc + "</div>";
             }
             con.Close();
 
@@ -126,50 +126,45 @@ namespace Archiver_Driver
                 // Save the uploaded file to the server.
                 string nameFile = ltriduser.Text + "-" + strFileName;
                 strFilePath = strFolder + "uploads/" + nameFile;
-                if (File.Exists(strFilePath))
-                {
-                    lblUploadResult.Text = nameFile + " Já existe no Servidor!";
-                }
-                else
-                {
-                    oFile.PostedFile.SaveAs(strFilePath);
-                    lblUploadResult.Text = nameFile + " foi carregado com sucesso.";
 
-                    System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
-                    System.Configuration.ConnectionStringSettings connString;
-                    connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+                oFile.PostedFile.SaveAs(strFilePath);
+                lblUploadResult.Text = nameFile + " foi carregado com sucesso.";
 
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = connString.ToString();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
+                System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
+                System.Configuration.ConnectionStringSettings connString;
+                connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
 
-                    cmd.CommandText = "Insert into doc (idUser,title,type,path) values (@idUser,@title,@type,@path)";
-                    cmd.Parameters.AddWithValue("title", strFileName);
-                    cmd.Parameters.AddWithValue("idUser", ltrCookie.Text);
-                    cmd.Parameters.AddWithValue("type", "PDF");
-                    cmd.Parameters.AddWithValue("path", nameFile);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = connString.ToString();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
 
-                    System.Configuration.ConnectionStringSettings connString2;
-                    connString2 = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-                    connString2 = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+                cmd.CommandText = "Insert into doc (idUser,title,type,path) values (@idUser,@title,@type,@path)";
+                cmd.Parameters.AddWithValue("title", strFileName);
+                cmd.Parameters.AddWithValue("idUser", ltrCookie.Text);
+                cmd.Parameters.AddWithValue("type", "PDF");
+                cmd.Parameters.AddWithValue("path", nameFile);
+                con.Open();
+                cmd.ExecuteNonQuery();
 
-                    SqlConnection con2 = new SqlConnection();
-                    con2.ConnectionString = connString2.ToString();
-                    SqlCommand cmd2 = new SqlCommand();
-                    cmd2.Connection = con2;
+                System.Configuration.ConnectionStringSettings connString2;
+                connString2 = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+                connString2 = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
 
-                    cmd2.CommandText = "Insert into log (idUser,title,stats) values (@idUser,@title,@stats)";
-                    cmd2.Parameters.AddWithValue("idUser", ltrCookie.Text);
-                    cmd2.Parameters.AddWithValue("title", strFileName);
-                    cmd2.Parameters.AddWithValue("stats", "criado");
-                    con2.Open();
-                    cmd2.ExecuteNonQuery();
-                    con2.Close();
-                    Response.Redirect("~/index.aspx");
-                }
+                SqlConnection con2 = new SqlConnection();
+                con2.ConnectionString = connString2.ToString();
+                SqlCommand cmd2 = new SqlCommand();
+                cmd2.Connection = con2;
+
+                cmd2.CommandText = "Insert into log (idUser,title,stats) values (@idUser,@title,@stats)";
+                cmd2.Parameters.AddWithValue("idUser", ltrCookie.Text);
+                cmd2.Parameters.AddWithValue("title", strFileName);
+                cmd2.Parameters.AddWithValue("stats", "criado");
+                con2.Open();
+                cmd2.ExecuteNonQuery();
+                con2.Close();
+                Response.Redirect("~/index.aspx");
+
             }
             else
             {
@@ -177,7 +172,7 @@ namespace Archiver_Driver
             }
             frmConfirmation.Visible = true;
         }
-        
+
     }
 }
 
