@@ -66,12 +66,12 @@
 
     <br />
 
-    <div class="text-center">
+    <div class="text-center container-fluid">
 
-        <div class="form-control bg-secondary">
+        <div class="form-control bg-dark table-responsive">
             <h2 class="text-light pb-2">Tabela de Usuario </h2>
 
-            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-condensed table-light table-striped" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -87,7 +87,7 @@
 
         <br />
 
-        <div class="form-control bg-secondary">
+        <div class="form-control bg-dark table-responsive">
             <h2 class="text-light pb-2">Tabela de contato</h2>
 
             <asp:GridView ID="GridView2" runat="server" AllowPaging="True" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None">
@@ -117,7 +117,7 @@
 
     <br />
 
-    <div class="form-control bg-secondary">
+    <div class="form-control bg-dark table-responsive">
         <h2 class="text-light pb-2">Tabela de logs</h2>
 
             <asp:GridView ID="GridView4" runat="server" AllowPaging="True" CssClass="table table-bordered table-condensed table-responsive table-light table-striped" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="idLog" DataSourceID="SqlDataSource4" ForeColor="#333333" GridLines="None">

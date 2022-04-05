@@ -25,12 +25,12 @@
 
                             <div class="form-group mb-0">
                                 <label for="tbEmail">Seu e-mail:</label>
-                                <asp:TextBox ID="tbEmail" CssClass="form-control" Text="Digite seu E-mail" onfocus="this.value=''" runat="server" Width="254px"></asp:TextBox>
+                                <asp:TextBox ID="tbEmail" CssClass="form-control w-100" Text="Digite seu E-mail" onfocus="this.value=''" runat="server"></asp:TextBox>
                             </div>
 
                             <div class="form-group mb-2">
                                 <label for="tbSenha">Sua senha:</label>
-                                <asp:TextBox ID="tbPass" CssClass="form-control" runat="server" TextMode="Password" Width="254px"></asp:TextBox>
+                                <asp:TextBox ID="tbPass" CssClass="form-control w-100" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
 
                             <div class="text-center">
@@ -40,7 +40,7 @@
                                     Ainda não tem conta?
                                     <br />
                                     <a class="text-primary" href="register.aspx">Cadastrar-se</a>
-                                    
+
                                 </p>
                             </div>
                         </form>
@@ -57,6 +57,21 @@
             </div>
         </div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script>
+        (() => {
+            if (!localStorage.pureJavaScriptCookies) {
+                document.querySelector(".box-cookies").classList.remove('d-none');
+            }
+
+            const acceptCookies = () => {
+                document.querySelector(".box-cookies").classList.add('d-none');
+                localStorage.setItem("pureJavaScriptCookies", "accept");
+            };
+
+            const btnCookies = document.querySelector(".btn-cookies");
+
+            btnCookies.addEventListener('click', acceptCookies);
+        })();
+    </script>
 </body>
 </html>

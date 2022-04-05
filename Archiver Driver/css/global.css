@@ -97,6 +97,17 @@ body a {
 .w-10 {
     width: 10%;
 }
+
 .wi50 {
     width: 160px;
+}
+
+.pF::first-letter {
+
+}
+
+.pF {
+    font-size: 150%;
+    margin-right: 5px;
+    color: red;
 }

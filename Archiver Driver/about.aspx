@@ -5,31 +5,51 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <main class="mt-3 fs-5">
-        <div class="container-fluid d-block">
-            <div class="img-thumbnail text-center col-5 float-start me-2">
-                <img class="rounded img-fluid" src="assets/workers-at-an-it-company-working-on-a-computer.jpg" alt="Desenvolvedores da Woop!Applications" />
-                <p class="pt-2">Equipe da <a href="https://github.com/YinYal" target="_blank">Woop! Applications</a>.</p>
-            </div>
+    <div class="container-fluid d-block d-sm-flex justify-content-sm-around mt-3">
 
-            <div class="">
-                <h2 class="text-center mb-2">Sobre nós</h2>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nós somos a <a href="https://github.com/YinYal" target="_blank"><strong>Woop! Applications</strong></a> uma empresa nascida no Senac com o intuito de desenvolver ferramentas mais objetivas e mais simples. Somos 5 desesenvolvedores que 
-                    não entendiam nada de programação e bem pouco sobre computadores e afins, mas mesmo assim nos empenhamos e demos o nosso melhor para desenvolvermos o melhor trabalho possivel.
-
+        <aside class="col-12 col-sm-4">
+            <div class="text-end fs-5">
+                <h2 class="text-center">Sobre nós</h2>
+                <p class="mb-1">
+                    Nós somos a Woopy! Applications, uma empresa nascida no senac com o intuito de desenvolver ferramentas para a facilitação de nossos usuários.
+            Visamos criar feramentas que sejam intuitivas e de fácil manipulação para que usuários de todas as idades consigam mexer em nossas aplicações sem quaisquer problemas.
                 </p>
+
+                <p class="mb-1">
+                    Sendo uma empresa inovadora na área de tecnologia, construímos softwares e aplicativos para ajudar nossos clientes a acelerar seu crescimento digital e conseguimos isso através de profissionais qualificados e engajados em enfrentar as mudanças constantes deste mercado de trabralho, transformando a tecnologia em bons resultados.
+                </p>
+
+                <h3 class="text-center mt-2 mb-2">Nosso projeto</h3>
+                <p class="mb-1">
+                    Este é o nosso primeiro projeto, o <strong>Archiver Driver</strong>, um gerenciador de arquivos PDF.
+            Uma aplicação criada no formato <strong>SPA e MVC</strong>, as nossas linhas de conexão com o banco de dados foram criadas em <strong>C#</strong> e o banco de dados foi criado em <strong>SQL server</strong>. Utilizamos a ferramenta <strong>bootstrap</strong>
+                para toda a estilização e responsividade do template base.
+            <p />
+            </div>
+        </aside>
+
+        <article class="col-12 col-sm-5">
+            <div class="img-thumbnail text-center pt-2 pe-2 ps-2 bg-light">
+                <img src="https://picsum.photos/500/300" class="rounded mx-auto d-block w-100" alt="Equipe de desenvolvedores da Woopy! Application." />
+                <p class="mt-2 mb-2">Equipe de desenvolvedores da <a href="#">Woopy! Application</a>.</p>
             </div>
 
-            <div class="d-block">
-                <h2 class="text-center mb-2">Sobre o projeto</h2>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este é o nosso primeiro projeto, o <strong>Archiver Driver</strong>, um gerenciador de arquivos PDF.
-                    Uma aplicação criada no formato <strong>SPA e MVC</strong>, as nossas linhas de conexão com o banco de dados foram criadas em <strong>C#</strong> e o banco de dados foi criado em <strong>SQL server</strong>. Utilizamos a ferramenta <strong>bootstrap</strong>
-                    para toda a estilização e responsividade do template base.
-                </p>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </main>
+            <figure class="mt-5">
+                <blockquote class="blockquote">
+                    <p>"Se não puder voar, corra. Se não puder correr, ande. Se não puder andar, rasteje, mas continue em frente de qualquer jeito."</p>
+                </blockquote>
+                <figcaption class="blockquote-footer"><cite title="Source Title">Martin Luther King JR.</cite>
+                </figcaption>
+            </figure>
+
+            <figure class="mt-5">
+                <blockquote class="blockquote">
+                    <p>"Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez."</p>
+                </blockquote>
+                <figcaption class="blockquote-footer"><cite title="Source Title">Thomas Edison.</cite>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
 </asp:Content>
+

@@ -75,7 +75,9 @@
     <Content Include="assets\background.jpeg" />
     <Content Include="assets\coiso.txt" />
     <Content Include="assets\favcon.ico" />
+    <Content Include="assets\herick bartholo.jpeg" />
     <Content Include="assets\icon.png" />
+    <Content Include="assets\matheus allen.jpeg" />
     <Content Include="assets\workers-at-an-it-company-working-on-a-computer.jpg" />
     <Content Include="dashboard.aspx" />
     <Content Include="delete.aspx" />
