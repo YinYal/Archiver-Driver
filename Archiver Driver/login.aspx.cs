@@ -17,7 +17,7 @@ namespace ProjetoFinal
 
         }
 
-        public static String sha256_hash(String value)
+        public static String Sha256_hash(String value)
         {
             StringBuilder Sb = new StringBuilder();
 
@@ -33,28 +33,50 @@ namespace ProjetoFinal
             return Sb.ToString();
         }
 
-        protected void btnlogar_Click(object sender, EventArgs e)
+        protected void Btnlogar_Click(object sender, EventArgs e)
         {
             String email = tbEmail.Text;
-            String pass = tbPass.Text;
+            String pass = Sha256_hash(tbPass.Text);
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connString;
             connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = connString.ToString();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from client where email = @email and password = @password";
+            SqlConnection con = new SqlConnection
+            {
+                ConnectionString = connString.ToString()
+            };
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = con,
+                CommandText = "select * from client where email = @email and password = @password"
+            };
             cmd.Parameters.AddWithValue("email", email);
-            cmd.Parameters.AddWithValue("password", sha256_hash(tbPass.Text));
+            cmd.Parameters.AddWithValue("password", pass);
             con.Open();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
-                //Cria o cookie
-                HttpCookie login = new HttpCookie("login", tbEmail.Text);
+                // Fez a leitura de todas as linha encontradas no banco
+                registro.Read();
+                //Cria o cookie do Login Com email do Banco de Dados
+                string loginCookie = registro["email"].ToString();
+                HttpCookie login = new HttpCookie("login", loginCookie);
                 Response.Cookies.Add(login);
 
+                //Cria o cookie do id do usuário
+                string IdUserCookie = registro["Id"].ToString();
+                // Preaparaçao para o Navegador
+                HttpCookie IdUser = new HttpCookie("id_user", IdUserCookie);
+                // Inserção do cookie no navegador
+                Response.Cookies.Add(IdUser);
+
+                //Cria o cookie do nome do usuario
+                string nomeCookie = registro["name"].ToString(); // Resgata no Banco
+                HttpCookie nomeC = new HttpCookie("nameC", nomeCookie);
+                Response.Cookies.Add(nomeC);
+
+                string admCookie = registro["adm"].ToString(); // Resgata no Banco
+                HttpCookie admC = new HttpCookie("admC", admCookie);
+                Response.Cookies.Add(admC);
 
                 //string cookie = Request.Cookies["login"];
 

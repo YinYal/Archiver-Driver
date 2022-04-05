@@ -10,6 +10,8 @@ namespace Archiver_Driver
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+        public object GridView1 { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -45,12 +47,21 @@ namespace Archiver_Driver
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            GridView1.DataBind();
+            Response.Redirect("~/contacts.aspx");
         }
 
         protected void contactMessage_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            contactName.Text = string.Empty;
+            contactEmail.Text = string.Empty;
+            contactTell.Text = string.Empty;
+            contactSubject.Text = string.Empty;
+            contactMessage.Text = string.Empty;
         }
     }
 }

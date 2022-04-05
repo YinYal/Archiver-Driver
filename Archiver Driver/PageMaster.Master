@@ -7,53 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/favcon.ico" />
     <link href="css/global.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Archiver Driver</title>
 </head>
 <body runat="server">
     <!-- Barra de navegação responsiva -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky top-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.aspx">Archiver Driver</a>
+            <a href="index.aspx" class="pe-3 ps-1">
+                <img src="assets/icon.png" width="50" height="50" /><asp:Label ID="Label1" runat="server" Visible="false" ></asp:Label></a>
+            <a class="navbar-brand" href="index.aspx"><strong>Archiver Driver</strong><asp:Label ID="ltrCookie" runat="server" Visible="false"></asp:Label></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-6 text-uppercase">
-                       <li class="nav-item"><a class="nav-link" aria-current="page" href="index.aspx" title="Página inicial"><i class="fas fa-home"></i> início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacts.aspx" title="Faça contato"><i class="fas fa-comments"></i> contatos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.aspx" title="Sobre agente"><i class="fas fa-info"></i> sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="config.aspx" title="Enviar documenntos"><i class="fas fa-cog"></i> config.</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" onclick="logout()" title="Sair da conta"><i class="fas fa-sign-out-alt"></i> sair</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.aspx" title="Página inicial"><i class="fas fa-home pe-1"></i>início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.aspx" title="Faça contato"><i class="fas fa-comments pe-1"></i>contatos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.aspx" title="Sobre agente"><i class="fas fa-info pe-1"></i>sobre</a></li>
+       <asp:Label ID="hideMenu" runat="server" Visible="false"> <li class="nav-item"><a class="nav-link" href="dashboard.aspx" title="Dashboard"><i class="fas fa-columns pe-1"></i>dashboard</a></li></asp:Label>          
+                    <li class="nav-item"><a class="nav-link" href="config.aspx" title="Enviar documenntos"><i class="fas fa-cog pe-1"></i>config.</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="logout()" title="Sair da conta"><i class="fas fa-sign-out-alt pe-1"></i>sair</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Container do meio da página -->
-    <div class="container-fluid">
-        <!-- Conteúdo do meio da página (com formatação pra conteúdo centralizado) -->
-        <div class="text-start mt-auto">
-            <form id="form1" runat="server">
+    <main>
+        <div id="main">
+            <!-- Conteúdo do meio da página (com formatação pra conteúdo centralizado) -->
+            <div class="mt-auto">
                 <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+                    <form id="Form1" runat="server">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-    <!-- Bootstrap core JS-->
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-     <script>
-                    function logout() {
-                        let text = "Deseja realmente sair";
-                        if (confirm(text) == true) {
-                            window.location.href = "logout.aspx";
-                        } 
-                    }
-     </script>
+    <footer class="text-center text-white">
+        <div class="container p-2"></div>
+        <div class="text-center p-3 bg-dark">
+            © 2022 
+   
+            <a class="text-white" href="https://github.com/YinYal" target="_blank">Woopy! Applications</a>
+        </div>
+    </footer>
 </body>
 </html>
 

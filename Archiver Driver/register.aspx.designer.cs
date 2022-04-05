@@ -33,6 +33,15 @@ namespace ProjetoFinal
         protected global::System.Web.UI.WebControls.TextBox tbName;
 
         /// <summary>
+        /// Controle reqMin.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMin;
+
+        /// <summary>
         /// Controle tbEmail.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ProjetoFinal
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
+
+        /// <summary>
+        /// Controle RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// Controle tbPass.
@@ -51,6 +69,15 @@ namespace ProjetoFinal
         protected global::System.Web.UI.WebControls.TextBox tbPass;
 
         /// <summary>
+        /// Controle RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
         /// Controle tbPassconfi.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace ProjetoFinal
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbPassconfi;
+
+        /// <summary>
+        /// Controle RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
         /// Controle CompareValidator1.
